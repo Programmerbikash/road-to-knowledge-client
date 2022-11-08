@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const AllServices = ({ service }) => {
   // console.log(service)
-  const { title, image, rating, price, description } = service;
+  const { _id, title, image, rating, price, description } = service;
 
   return (
     <div className="p-4 md:w-1/3">
@@ -28,9 +28,18 @@ const AllServices = ({ service }) => {
           <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
             {title}
           </h1>
-          <p className="leading-relaxed mb-3">{description}</p>
+          <p className="leading-relaxed mb-3">
+            {description.length >= 250 ? (
+              <>{description.slice(0, 250)}...</>
+            ) : (
+              <>{description}</>
+            )}
+          </p>
           <div className="flex items-center flex-wrap ">
-            <Link className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+            <Link
+              to={`/service/${_id}`}
+              className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
+            >
               <button className="btn btn-accent">
                 View Details
                 <svg
@@ -57,7 +66,7 @@ const AllServices = ({ service }) => {
                 strokeLinejoin="round"
                 viewBox="0 0 24 24"
               ></svg>
-              <FaStar /> <span className="ml-2">{rating}</span>
+              <FaStar className="w-5 h-5 text-yellow-400" /> <span className="ml-2">{rating}</span>
             </span>
             <span className="text-gray-400 inline-flex items-center leading-none text-sm">
               <svg
