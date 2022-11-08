@@ -12,9 +12,7 @@ const Feature = () => {
           Study Support
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
-            Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-            taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi
-            pug.
+          Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will spend its whole life believing that it is stupid. Success isn't overnight. It's when every day you get a little better than the day before. It all adds up.
           </p>
           <div className="flex mt-6 justify-center">
             <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
