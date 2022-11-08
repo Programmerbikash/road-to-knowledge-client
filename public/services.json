@@ -1,0 +1,50 @@
+[
+    {
+        "category_id":"01",
+        "title": "Private Tutoring",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2WOQqrsftnMTS7sPrrCQHFOmJENUzD7xkSw&usqp=CAU",
+        "rating": "4.6",
+        "price": "16.99",
+        "description": "Private tutoring is additional to school and usually takes place outside of school hours. Tuition normally takes place in the evenings or at the weekends. Tutors work with a variety of students, from those who are particularly struggling with areas of learning, to those who are looking for a challenge. For example, a student may have gaps in their knowledge from a previous year which are holding them back in their studies. To help fill in these gaps, they may work with a private tutor. If a student is preparing for an exam, such as 11 plus, or GCSEs, they may hire a private tutor to help them with their preparation for this. This can then help them to feel more confident when going into an exam."
+    },
+    {
+        "category_id":"02",
+        "title": "Lectures",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBkXKcRjoGbF-A074V3MJSUgcxmRMK8YA07w&usqp=CAU",
+        "rating": "3.7",
+        "price": "14.99",
+        "description": "A lecture (from Latin lēctūra “reading” ) is an oral presentation intended to present information or teach people about a particular subject, for example by a university or college teacher. Lectures are used to convey critical information, history, background, theories, and equations. A politician's speech, a minister's sermon, or even a business person's sales presentation may be similar in form to a lecture. Usually the lecturer will stand at the front of the room and recite information relevant to the lecture's content."
+    },
+    {
+        "category_id":"03",
+        "title": "Online Courses",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrB316r8315DhkMGQvCCL1yR6T0RaFY71Ypw&usqp=CAU",
+        "rating": "4.8",
+        "price": "22.99",
+        "description": "An online course is a program of learning that’s organized according to a syllabus (usually in units) and that takes place in a virtual space. Online courses can be informal and focused on one skill or as formal as leading to a certification or degree. There are many benefits of online courses. One of the main advantages is the flexibility: Online courses are accessible anytime, anywhere. Self-paced online courses, where learning is self-directed and there are no time commitments beyond what the student is motivated to put in, are often ideal for those with demanding schedules or who are trying to balance a family or multiple jobs."
+    },
+    {
+        "category_id":"04",
+        "title": "Consulting",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6sVh1Q1B8Amo2O7p2kTnhGYgp5I390zTqFg&usqp=CAU",
+        "rating": "4.3",
+        "price": "15.99",
+        "description": "As mentioned above, a consultant is someone in a role to help another person, team or organization to change, but who has no authority to make that change happen. There are many myths and misunderstandings about consulting, the most common of which is that consultants always provide expert advice to solve “problems”. Actually, a consultant might use many different styles, approaches and methods, depending on the nature of the client and focus of the consulting project. Roles can range along a continuum from that of an expert who gives ongoing advice to that of a coach or facilitator who supports a person or group with ongoing reflective questions to bring out their own wisdom and apply it."
+    },
+    {
+        "category_id":"05",
+        "title": "Lessons for Kids",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNPyCIOBRRzZ0nUHtcGlqiG3gUXvPBo2A7Mg&usqp=CAU",
+        "rating": "4.6",
+        "price": "13.99",
+        "description": "Every parent wants to see their kid flourish and become successful in life. However, it is not easy to survive in today’s challenging times. Parents need to prepare their kids so that they can effectively deal with all the struggles, failures and conflicts that life may throw at them. Parents can use their own valuable experience and knowledge to impart some noteworthy life lessons to their kids so that they may become fully capable of managing their affairs with confidence, even without the active support of parents later on in life. An ideal way to inculcate honesty in your child may be through the example of personal behaviour. Children usually take cues from their parents. "
+    },
+    {
+        "category_id":"06",
+        "title": "Remote Learning",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAb0rfYmBEgmij1jlP4BGUXAghG3y6OaiM5g&usqp=CAU",
+        "rating": "4.9",
+        "price": "12.99",
+        "description": "Remote learning is, simply put, where the student and the educator are not physically present in a traditional classroom environment. Rather, instruction is disseminated through technology tools such as discussion boards, video conferencing, and virtual assessments. It is an attempt to recreate the in-person, face-to-face classroom over the internet. Unlike its close relative, virtual learning, which is a more official, established mode of online learning, remote education involves teachers and students who are not accustomed to education that takes place online. It is typically used during scheduling conflicts, illnesses, or, like today, disasters. This particular newness of remote learning, then, is what can make it tricky for both educators and students."
+    }
+]
