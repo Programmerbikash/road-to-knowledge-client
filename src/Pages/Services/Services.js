@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import AllServices from "../Home/AllServices/AllServices";
 
 const Services = () => {

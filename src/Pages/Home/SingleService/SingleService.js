@@ -3,9 +3,9 @@ import { FaMoneyCheckAlt, FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const SingleService = ({ service }) => {
-    console.log(service)
+    // console.log(service)
     const { title, image, rating, price, description } = service;
-    
+
     return (
         <div className="p-4 md:w-1/3">
             <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">

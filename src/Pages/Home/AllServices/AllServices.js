@@ -3,7 +3,7 @@ import { FaMoneyCheckAlt, FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const AllServices = ({ service }) => {
-    console.log(service)
+    // console.log(service)
     const { title, image, rating, price, description } = service;
 
     return (
