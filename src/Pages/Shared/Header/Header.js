@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 
 const Header = () => {
+  const { user, LogOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    LogOut()
+      .then()
+      .catch();
+  }
+
   return (
     <div className="relative">
       <div className="navbar bg-base-100 shadow-sm fixed top-0 left-0 right-0 z-40">
@@ -38,17 +47,17 @@ const Header = () => {
                 <Link to="/blogs">Blogs</Link>
               </li>
               <li>
-                <Link to="/login">Login</Link>
-              </li>
-              <li>
-                <Link>My reviews</Link>
-              </li>
-              <li>
                 <Link>Add service</Link>
               </li>
-              <li>
-                <Link>LogOut</Link>
-              </li>
+              {
+                  user?.email ? 
+                    <>
+                      <li><Link to="/myReview">My reviews</Link></li>
+                      <li><Link><button onClick={handleLogOut}>LogOut</button></Link></li>
+                    </>
+                    : 
+                    <><li><Link to="/login">Login</Link></li></>
+                }
             </ul>
           </div>
           <img className="w-10 h-10 md:ml-12" src={logo} alt="" />
@@ -68,17 +77,17 @@ const Header = () => {
               <Link to="/blogs">Blogs</Link>
             </li>
             <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link>My reviews</Link>
-            </li>
-            <li>
               <Link>Add service</Link>
             </li>
-            <li>
-              <Link>LogOut</Link>
-            </li>
+            {
+                  user?.email ? 
+                    <>
+                      <li><Link to="/myReview">My reviews</Link></li>
+                      <li><Link><button onClick={handleLogOut}>LogOut</button></Link></li>
+                    </>
+                    : 
+                    <><li><Link to="/login">Login</Link></li></>
+                }
           </ul>
         </div>
       </div>

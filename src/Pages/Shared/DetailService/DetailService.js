@@ -1,17 +1,19 @@
-import React from "react";
 import { FaMoneyCheckAlt, FaStar } from "react-icons/fa";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import { useLoaderData } from "react-router-dom";
+import ReviewSecton from "../../MyReview/ReviewSecton";
 
 const DetailService = () => {
   const service = useLoaderData();
+  
   // console.log(service);
   const { title, description, image, price, rating } = service;
 
+
   return (
-    <div className="mt-20 mb-10 bg-slate-300">
-      <section className="text-gray-600 body-font">
+    <div className="mt-20 mb-10">
+      <section className="text-gray-600 body-font bg-slate-300">
         <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
           <PhotoProvider>
             <PhotoView src={image}>
@@ -58,6 +60,11 @@ const DetailService = () => {
           </div>
         </div>
       </section>
+      <div>
+        <div>
+          <ReviewSecton></ReviewSecton>
+        </div>
+      </div>
     </div>
   );
 };
