@@ -2,10 +2,12 @@ import { FaMoneyCheckAlt, FaStar } from "react-icons/fa";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../../../hooks/useTitle";
 import ReviewSecton from "../../MyReview/ReviewSecton";
 
 const DetailService = () => {
   const service = useLoaderData();
+  useTitle('Service')
   
   // console.log(service);
   const { title, description, image, price, rating } = service;

@@ -1,29 +1,32 @@
 import React, { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 const CheckOut = () => {
     const allService = useLoaderData();
     const { _id, title } = allService;
     const { user } = useContext(AuthContext);
+    useTitle('CheckOut')
 
     const handleService = e => {
         e.preventDefault();
         const form = e.target;
         const name = `${form.fName.value} ${form.lName.value}`;
-        const email = user?.emaill || "Invalid Email"
-        const id = _id || "Haven't Any Id"
+        // const email = user?.emaill || "Invalid Email";
+        const email = form.email.value;
+        const url = user?.photoURL || "Haven't Any Image"
         const message = form.message.value;
-        console.log(name, email, id, message);
+        console.log(name, email, url, message);
         const review = {
             service: _id,
             serviceName: title,
             name,
-            email,
-            id,
+            email: email,
+            url,
             message
         }
-        fetch('https://road-to-knowledge-server.vercel.app/reviews', {
+        fetch('http://localhost:5000/reviews', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -106,12 +109,10 @@ const CheckOut = () => {
                     User Id
                   </label>
                   <input
-                    type="text"
-                    id="id"
-                    name="id"
+                    type="url"
+                    name="url"
                     className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                    defaultValue={_id}
-                    readOnly
+                    defaultValue={user?.photoURL}
                   />
                 </div>
               </div>

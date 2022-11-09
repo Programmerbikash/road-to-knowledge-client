@@ -1,9 +1,11 @@
 import React from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from "../../hooks/useTitle";
 
 const AddService = () => {
   const notify = () => toast("Your Service Add Successfully!");
+  useTitle('AddService')
     
     const handleService = e => {
         e.preventDefault()

@@ -1,6 +1,8 @@
 import React from "react";
+import useTitle from "../../hooks/useTitle";
 
 const Blogs = () => {
+  useTitle('Blogs')
   return (
     <div className="mt-24 mb-8 text-center w-4/5 mx-auto bg-slate-300 rounded-3xl p-5">
       <div tabIndex={0} className="collapse group my-3 rounded-3xl">
