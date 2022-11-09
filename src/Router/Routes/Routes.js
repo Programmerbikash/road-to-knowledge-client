@@ -9,6 +9,7 @@ import ReviewSecton from "../../Pages/MyReview/ReviewSecton";
 import Services from "../../Pages/Services/Services";
 import DetailService from "../../Pages/Shared/DetailService/DetailService";
 import SignUp from "../../Pages/SignUp/SignUp";
+import PrivateRouter from "../PrivateRouter/PrivateRouter";
 
 export const router = createBrowserRouter([
     {
@@ -52,7 +53,7 @@ export const router = createBrowserRouter([
         },
         {
           path: "checkOut/:id",
-          element: <CheckOut></CheckOut>,
+          element: <PrivateRouter><CheckOut></CheckOut></PrivateRouter>,
           loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`)
         },
       ],

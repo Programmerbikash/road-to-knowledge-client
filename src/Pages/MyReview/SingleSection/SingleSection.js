@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 const SingleSection = ({ view, image }) => {
-    const { id, message, name, service, serviceName, email } = view;
+    const { message, name, service, serviceName, email } = view;
 
     return (
             <tr>

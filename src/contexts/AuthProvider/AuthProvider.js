@@ -25,6 +25,7 @@ const AuthProvider = ({children}) => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             console.log(currentUser);
             setUser(currentUser);
+            setLoading(false);
         })
         return () => {
             return unsubscribe();
@@ -32,6 +33,7 @@ const AuthProvider = ({children}) => {
     }, [])
     
     const GoogleLogin = () => {
+        setLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
 
