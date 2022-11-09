@@ -10,7 +10,7 @@ const ReviewSecton = () => {
     const { _id } = reviewInfo;
     
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews`)
+        fetch(`https://road-to-knowledge-server.vercel.app/reviews`)
           .then(res => res.json())
           .then(data => {
             // console.log(data)

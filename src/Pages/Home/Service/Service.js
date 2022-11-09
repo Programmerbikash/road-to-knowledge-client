@@ -32,7 +32,7 @@ const Service = () => {
           {services.map((service) => (
             <SingleService
               service={service}
-              key={service.category_id}
+              key={service._id}
             ></SingleService>
           ))}
           <Link className="mx-auto" to="/services">

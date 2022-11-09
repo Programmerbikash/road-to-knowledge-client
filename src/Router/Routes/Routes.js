@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
+import AddService from "../../Pages/AddService/AddService";
 import Blogs from "../../Pages/Blogs/Blogs";
 import CheckOut from "../../Pages/CheckOut/CheckOut";
 import Home from "../../Pages/Home/Home/Home";
@@ -39,7 +40,7 @@ export const router = createBrowserRouter([
         {
           path: "service/:id",
           element: <DetailService></DetailService>,
-          loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`)
+          loader: ({params}) => fetch(`https://road-to-knowledge-server.vercel.app/service/${params.id}`)
         },
         {
           path: "/myReview",
@@ -48,13 +49,16 @@ export const router = createBrowserRouter([
         {
           path: "reviewSesction/:id",
           element: <ReviewSecton></ReviewSecton>,
-        //   loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`)
-          loader: fetch('http://localhost:5000/reviews')
+          loader: ({params}) => fetch(`https://road-to-knowledge-server.vercel.app/service/${params.id}`)
         },
         {
           path: "checkOut/:id",
           element: <PrivateRouter><CheckOut></CheckOut></PrivateRouter>,
-          loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`)
+          loader: ({params}) => fetch(`https://road-to-knowledge-server.vercel.app/service/${params.id}`)
+        },
+        {
+          path: "/addService",
+          element: <PrivateRouter><AddService></AddService></PrivateRouter>
         },
       ],
     },

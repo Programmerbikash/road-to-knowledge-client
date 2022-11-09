@@ -7,10 +7,8 @@ const Header = () => {
   const { user, LogOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
-    LogOut()
-      .then()
-      .catch();
-  }
+    LogOut().then().catch();
+  };
 
   return (
     <div className="relative">
@@ -46,18 +44,27 @@ const Header = () => {
               <li>
                 <Link to="/blogs">Blogs</Link>
               </li>
-              <li>
-                <Link>Add service</Link>
-              </li>
-              {
-                  user?.email ? 
-                    <>
-                      <li><Link to="/myReview">My reviews</Link></li>
-                      <li><Link><button onClick={handleLogOut}>LogOut</button></Link></li>
-                    </>
-                    : 
-                    <><li><Link to="/login">Login</Link></li></>
-                }
+              {user?.email ? (
+                <>
+                  <li>
+                    <Link to="/myReview">My reviews</Link>
+                  </li>
+                  <li>
+                    <Link to="/addService">Add service</Link>
+                  </li>
+                  <li>
+                    <Link>
+                      <button onClick={handleLogOut}>LogOut</button>
+                    </Link>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link to="/login">Login</Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
           <img className="w-10 h-10 md:ml-12" src={logo} alt="" />
@@ -76,18 +83,27 @@ const Header = () => {
             <li>
               <Link to="/blogs">Blogs</Link>
             </li>
-            <li>
-              <Link>Add service</Link>
-            </li>
-            {
-                  user?.email ? 
-                    <>
-                      <li><Link to="/myReview">My reviews</Link></li>
-                      <li><Link><button onClick={handleLogOut}>LogOut</button></Link></li>
-                    </>
-                    : 
-                    <><li><Link to="/login">Login</Link></li></>
-                }
+            {user?.email ? (
+              <>
+                <li>
+                  <Link to="/myReview">My reviews</Link>
+                </li>
+                <li>
+                  <Link to="/addService">Add service</Link>
+                </li>
+                <li>
+                  <Link>
+                    <button onClick={handleLogOut}>LogOut</button>
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>

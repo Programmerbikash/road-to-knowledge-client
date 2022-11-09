@@ -14,7 +14,7 @@ const SingleSection = ({ view, image }) => {
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
-                      <img src={image} alt="Avatar Tailwind CSS Component" />
+                      <img src={image} alt="photoURL" />
                     </div>
                   </div>
                   <div>
