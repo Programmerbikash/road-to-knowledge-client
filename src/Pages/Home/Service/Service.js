@@ -4,6 +4,7 @@ import SingleService from "../SingleService/SingleService";
 
 const Service = () => {
   const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // Home Services API
   useEffect(() => {
@@ -11,9 +12,10 @@ const Service = () => {
       .then((res) => res.json())
       .then((data) => {
         setServices(data);
+        setLoading(false);
         // console.log(data);
       });
-  }, []);
+  }, [loading]);
 
   return (
     <section className="text-gray-600 body-font">

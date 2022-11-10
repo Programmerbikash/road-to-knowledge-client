@@ -4,6 +4,8 @@ import AllServices from "../Home/AllServices/AllServices";
 
 const Services = () => {
   const [services, setServices] = useState([]);
+  let [loading, setLoading] = useState(true);
+
   useTitle('Services')
 
   // All service API
@@ -13,12 +15,13 @@ const Services = () => {
         .then((data) => {
           setServices(data);
           // console.log(data);
+          setLoading(false);
         });
-    }, []);
+    }, [loading]);
 
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 py-20 mx-auto">
+        <div className="container px-5 py-20 mx-auto">
         <div className="text-center mb-16">
           <h1 className="sm:text-xl text-2xl font-medium title-font text-gray-900 mb-4">
             All Services
@@ -36,6 +39,7 @@ const Services = () => {
           }
         </div>
       </div>
+      
     </section>
   );
 };
