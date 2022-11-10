@@ -22,11 +22,6 @@ const SingleService = ({ service }) => {
             />
           </PhotoView>
         </PhotoProvider>
-        {/* <img
-                className="lg:h-48 md:h-full w-full object-cover object-center"
-                src={image}
-                alt="blog"
-              /> */}
         <div className="p-6">
           <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
             CATEGORY

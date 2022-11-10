@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+&#8226; This is a course project. This project i used firebase login, register, createuser and google login etc...
+&#8226; For this project i used mongoDB database for server site and then this server api i deployed in vercel.
+&#8226; Here are dynamic title for route, there are four section in home page.
+&#8226; Here are i used env variable both client and server site.
+&#8226; The blog page has four question.
+&#8226; Of this my reviews page you can see your review and delete.
+&#8226; In add service page you can add your review.
+&#8226; If you click any service image then this image show in full page.
+&#8226; This Site name is Road to knowledge.
+&#8226; Live Site Link: https://road-to-knowledge.web.app/
