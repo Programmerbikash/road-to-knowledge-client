@@ -6,8 +6,10 @@ import useTitle from "../../hooks/useTitle";
 
 const SignUp = () => {
   const { CreateUserWithEmailAndPassword } = useContext(AuthContext);
+  // Dynamic Register
   useTitle('Register')
 
+  // For Register handler
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;

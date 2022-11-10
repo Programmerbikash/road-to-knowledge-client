@@ -8,8 +8,11 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
+
+  // Dynamic title
   useTitle('Login')
 
+  // For Log In User
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -19,8 +22,26 @@ const Login = () => {
     LogInWithEmailAndPassword(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
-        navigate(from, { replace: true });
+        const currentUser = {
+          email: user.email
+        }
+        // console.log(user);
+
+        // get jwt token
+        fetch('https://road-to-knowledge-server-programmerbikash.vercel.app/jwt', {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(currentUser)
+        })
+        .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            // local storage is the easiest but not the best place to store jwt token
+            localStorage.setItem('review-token', data.token);
+            navigate(from, { replace: true });
+        })
         form.reset();
       })
       .catch((error) => {
@@ -28,6 +49,7 @@ const Login = () => {
       });
   };
 
+  // Social Login By Google
   const handleGoogleLogin = () => {
     GoogleLogin()
       .then((result) => {

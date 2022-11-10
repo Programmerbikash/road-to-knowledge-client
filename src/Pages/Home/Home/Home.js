@@ -8,7 +8,7 @@ import Service from '../Service/Service';
 const Home = () => {
     useTitle('Home')
     return (
-        <div>
+        <div className=''>
             <Banner></Banner>
             <Feature></Feature>
             <Experience></Experience>

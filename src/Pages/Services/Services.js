@@ -6,8 +6,9 @@ const Services = () => {
   const [services, setServices] = useState([]);
   useTitle('Services')
 
+  // All service API
     useEffect(() => {
-      fetch("http://localhost:5000/services")
+      fetch("https://road-to-knowledge-server-programmerbikash.vercel.app/services")
         .then((res) => res.json())
         .then((data) => {
           setServices(data);
@@ -31,7 +32,7 @@ const Services = () => {
         </div>
         <div className="flex flex-wrap -m-4">
           {
-            services.map(service => <AllServices service={service} key={service.category_id}></AllServices>)
+            services.map(service => <AllServices service={service} key={service._id}></AllServices>)
           }
         </div>
       </div>

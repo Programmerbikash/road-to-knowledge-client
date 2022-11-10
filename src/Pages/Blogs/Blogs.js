@@ -2,9 +2,12 @@ import React from "react";
 import useTitle from "../../hooks/useTitle";
 
 const Blogs = () => {
+  // Dynamic Title
   useTitle('Blogs')
+
   return (
     <div className="mt-24 mb-8 text-center w-4/5 mx-auto bg-slate-300 rounded-3xl p-5">
+      {/* First Question Answer */}
       <div tabIndex={0} className="collapse group my-3 rounded-3xl">
         <div className="collapse-title bg-slate-500 text-primary-content group-focus:bg-secondary group-focus:text-secondary-content font-bold">
           Difference between SQL and NoSQL
@@ -54,6 +57,7 @@ const Blogs = () => {
           </p>
         </div>
       </div>
+      {/* Second Question Answer */}
       <div tabIndex={1} className="collapse group my-3 rounded-3xl">
         <div className="collapse-title bg-slate-500 text-primary-content group-focus:bg-secondary group-focus:text-secondary-content font-bold">
           What is JWT, and how does it work?
@@ -76,6 +80,7 @@ const Blogs = () => {
           </p>
         </div>
       </div>
+      {/* Third Question Answer */}
       <div tabIndex={2} className="collapse group my-3 rounded-3xl">
         <div className="collapse-title bg-slate-500 text-primary-content group-focus:bg-secondary group-focus:text-secondary-content font-bold">
           What is the difference between javascript and NodeJS?
@@ -116,6 +121,7 @@ const Blogs = () => {
           </p>
         </div>
       </div>
+      {/* fourth Question Answer */}
       <div tabIndex={3} className="collapse group my-3 rounded-3xl">
         <div className="collapse-title bg-slate-500 text-primary-content group-focus:bg-secondary group-focus:text-secondary-content font-bold">
           How does NodeJS handle multiple requests at the same time?

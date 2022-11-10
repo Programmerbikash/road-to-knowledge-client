@@ -7,6 +7,7 @@ import ReviewSecton from "../../MyReview/ReviewSecton";
 
 const DetailService = () => {
   const service = useLoaderData();
+  // Dynamic Title
   useTitle('Service')
   
   // console.log(service);
@@ -17,6 +18,7 @@ const DetailService = () => {
     <div className="mt-20 mb-10">
       <section className="text-gray-600 body-font bg-slate-300">
         <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+          {/* Click Photo Full Viewer */}
           <PhotoProvider>
             <PhotoView src={image}>
               <img

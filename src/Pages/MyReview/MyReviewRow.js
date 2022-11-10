@@ -5,9 +5,7 @@ const MyReviewRow = ({ view, handleDeleteReview, handleReviewUpdate }) => {
 
     return (
         <tr>
-              <th>
-                <td><button onClick={() => handleDeleteReview(_id)} className="btn btn-ghost">X</button></td>
-              </th>
+              <td><button onClick={() => handleDeleteReview(_id)} className="btn btn-ghost">X</button></td>
               <td>{serviceName}</td>
               <td>{message}</td>
               <td><button onClick={() => handleReviewUpdate(_id)} className="btn btn-ghost">Update</button></td>

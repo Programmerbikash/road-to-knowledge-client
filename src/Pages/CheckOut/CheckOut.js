@@ -6,9 +6,11 @@ import useTitle from "../../hooks/useTitle";
 const CheckOut = () => {
     const allService = useLoaderData();
     const { _id, title } = allService;
-    const { user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
+  // For Dynamic Title Name
     useTitle('CheckOut')
 
+  // For review Form
     const handleService = e => {
         e.preventDefault();
         const form = e.target;
@@ -26,8 +28,9 @@ const CheckOut = () => {
             email: email,
             date: date,
             message
-        }
-        fetch('http://localhost:5000/reviews', {
+      }
+      // Review Post Api
+        fetch('https://road-to-knowledge-server-programmerbikash.vercel.app/reviews', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

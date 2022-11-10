@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
         {
           path: "service/:id",
           element: <DetailService></DetailService>,
-          loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`)
+          loader: ({params}) => fetch(`https://road-to-knowledge-server-programmerbikash.vercel.app/service/${params.id}`)
         },
         {
           path: "/myReview",
@@ -49,12 +49,12 @@ export const router = createBrowserRouter([
         {
           path: "reviewSesction/:id",
           element: <ReviewSecton></ReviewSecton>,
-          loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`)
+          loader: ({params}) => fetch(`https://road-to-knowledge-server-programmerbikash.vercel.app/service/${params.id}`)
         },
         {
           path: "checkOut/:id",
           element: <PrivateRouter><CheckOut></CheckOut></PrivateRouter>,
-          loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`)
+          loader: ({params}) => fetch(`https://road-to-knowledge-server-programmerbikash.vercel.app/service/${params.id}`)
         },
         {
           path: "/addService",

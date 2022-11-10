@@ -4,23 +4,35 @@ import useTitle from '../../hooks/useTitle';
 import MyReviewRow from './MyReviewRow';
 
 const MyReview = () => {
-    const { user } = useContext(AuthContext);
+    const { user, LogOut } = useContext(AuthContext);
     const [service, setService] = useState([]);
 
+  // For Dynamic Title
     useTitle('MyReview')
     
+    // For current user api
     useEffect(() => {
-        fetch(`http://localhost:5000/currentReview?email=${user?.email}`)
-        .then(res => res.json())
+      fetch(`https://road-to-knowledge-server-programmerbikash.vercel.app/currentReview?email=${user?.email}`, {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem('review-token')}`
+        }
+      })
+      .then((res) => {
+        if (res.status === 401 || res.status === 403) {
+          return LogOut();
+        }
+        return res.json()
+      })
         .then(data => setService(data))
-    }, [user?.email])
+    }, [user?.email, LogOut])
     
+    // Delete API
     const handleDeleteReview = (id) => {
         const procced = window.confirm(
           "Are you sure? You want to delete your review"
         );
         if (procced) {
-          fetch(`http://localhost:5000/reviews/${id}`, {
+          fetch(`https://road-to-knowledge-server-programmerbikash.vercel.app/reviews/${id}`, {
             method: 'DELETE',
             headers: {
               authorization: `Bearer ${localStorage.getItem('review-token')}`
@@ -38,8 +50,9 @@ const MyReview = () => {
         }
     };
     
+  // Update API
     const handleReviewUpdate = id => {
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://road-to-knowledge-server-programmerbikash.vercel.app/reviews/${id}`, {
             method: 'PATCH',
             headers: {
               'content-type': 'application/json',
@@ -62,8 +75,8 @@ const MyReview = () => {
     }
 
     return (
-        <div className="mt-20 mb-10">
-      <div className="overflow-x-auto w-full">
+      <div className="mt-20 mb-10">
+        <div className="overflow-x-auto w-full">
         <table className="table w-full">
           <thead>
             <tr>

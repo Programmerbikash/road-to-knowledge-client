@@ -11,19 +11,22 @@ const AuthProvider = ({children}) => {
 
     const googleProvider = new GoogleAuthProvider();
 
+    // Create User
     const CreateUserWithEmailAndPassword = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
+    // Login handler
     const LogInWithEmailAndPassword = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 
+    // For current user
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log(currentUser);
+            // console.log(currentUser);
             setUser(currentUser);
             setLoading(false);
         })
@@ -32,11 +35,13 @@ const AuthProvider = ({children}) => {
         }
     }, [])
     
+    // Google Login handler
     const GoogleLogin = () => {
         setLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
 
+    // For Logout handler
     const LogOut = () => {
         return signOut(auth);
     }

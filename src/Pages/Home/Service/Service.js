@@ -5,8 +5,9 @@ import SingleService from "../SingleService/SingleService";
 const Service = () => {
   const [services, setServices] = useState([]);
 
+  // Home Services API
   useEffect(() => {
-    fetch("http://localhost:5000/homeServices")
+    fetch("https://road-to-knowledge-server-programmerbikash.vercel.app/homeServices")
       .then((res) => res.json())
       .then((data) => {
         setServices(data);

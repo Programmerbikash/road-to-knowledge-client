@@ -5,8 +5,10 @@ import useTitle from "../../hooks/useTitle";
 
 const AddService = () => {
   const notify = () => toast("Your Service Add Successfully!");
+  // Dynamic Title
   useTitle('AddService')
     
+  // For service handler
     const handleService = e => {
         e.preventDefault()
         const form = e.target;
@@ -24,7 +26,7 @@ const AddService = () => {
             rating: rating,
             description: description
         }
-        fetch('http://localhost:5000/homeServices', {
+        fetch('https://road-to-knowledge-server-programmerbikash.vercel.app/homeServices', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
