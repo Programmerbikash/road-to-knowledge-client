@@ -32,7 +32,7 @@ const ReviewSecton = () => {
               <th>Name</th>
               <th>Title</th>
               <th>Review Message</th>
-              <th></th>
+              <th>Review Time</th>
             </tr>
           </thead>
           <tbody>

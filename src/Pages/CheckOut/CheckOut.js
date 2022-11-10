@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 import useTitle from "../../hooks/useTitle";
 
@@ -15,15 +15,16 @@ const CheckOut = () => {
         const name = `${form.fName.value} ${form.lName.value}`;
         // const email = user?.emaill || "Invalid Email";
         const email = form.email.value;
-        const url = user?.photoURL || "Haven't Any Image"
+        const date = form.date.value;
+        // const url = user?.photoURL || "Haven't Any Image"
         const message = form.message.value;
-        console.log(name, email, url, message);
+        console.log(name, email, date, message);
         const review = {
             service: _id,
             serviceName: title,
             name,
             email: email,
-            url,
+            date: date,
             message
         }
         fetch('http://localhost:5000/reviews', {
@@ -36,8 +37,8 @@ const CheckOut = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if (data.acknowledged) {
-                    alert('Order placed successfully');
+              if (data.acknowledged) {
+                    alert('Review placed successfully');
                     form.reset();
                 }
             })
@@ -106,13 +107,12 @@ const CheckOut = () => {
               <div className="p-2 w-1/2">
                 <div className="relative">
                   <label className="leading-7 text-sm text-gray-600">
-                    User Id
+                    Current Time
                   </label>
                   <input
-                    type="url"
-                    name="url"
+                    type="date"
+                    name="date"
                     className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                    defaultValue={user?.photoURL}
                   />
                 </div>
               </div>
