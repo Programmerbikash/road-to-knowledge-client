@@ -1,9 +1,12 @@
 import React from 'react';
 import useTitle from '../../../hooks/useTitle';
 import Banner from '../Banner/Banner';
+import CourseSummary from '../CourseSummary/CourseSummary';
 import Experience from '../Experience/Experience';
 import Feature from '../Feature/Feature';
 import Service from '../Service/Service';
+import TopCategories from '../TopCategories/TopCategories';
+import UpcomingEvents from '../UpcomingEvents/UpcomingEvents';
 
 const Home = () => {
     useTitle('Home')
@@ -12,7 +15,10 @@ const Home = () => {
             <Banner></Banner>
             <Feature></Feature>
             <Experience></Experience>
+            <TopCategories></TopCategories>
             <Service></Service>
+            <UpcomingEvents></UpcomingEvents>
+            <CourseSummary></CourseSummary>
         </div>
     );
 };

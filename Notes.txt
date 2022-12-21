@@ -1,0 +1,42 @@
+WEBSITE NAME: 
+Road to Knowledge
+road-to-knowledge
+
+road-to-knowledge-client
+Github Link: https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-Programmerbikash
+
+road-to-knowledge-server
+Github Link: https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-Programmerbikash
+
+
+  apiKey: "AIzaSyD1wazbyiyFNgkuRVjeYEIC1tkZQdVgXNA",
+  authDomain: "road-to-knowledge.firebaseapp.com",
+  projectId: "road-to-knowledge",
+  storageBucket: "road-to-knowledge.appspot.com",
+  messagingSenderId: "229555724267",
+  appId: "1:229555724267:web:559929d2ee5a7c2205c3ae"
+
+
+FIREBASE
+-------------
+Link: https://road-to-knowledge.web.app/
+npm run build
+firebase deploy
+
+VERCEL
+----------
+Link: https://road-to-knowledge-server.vercel.app/
+vercel
+
+Hero Icons
+import { BeakerIcon } from '@heroicons/react/24/solid'
+<BeakerIcon className="h-6 w-6 text-blue-500"/>
+
+React Icons
+import { FaBeer } from 'react-icons/fa';
+<FaBeer />
+
+
+
+
+

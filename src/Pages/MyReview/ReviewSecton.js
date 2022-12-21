@@ -9,7 +9,7 @@ const ReviewSecton = () => {
     const [review, setReview] = useState([]);
     const { _id } = reviewInfo;
     
-    useEffect(() => {
+    useEffect((id) => {
         fetch(`https://road-to-knowledge-server-programmerbikash.vercel.app/reviews`)
           .then(res => res.json())
           .then(data => {
@@ -36,11 +36,12 @@ const ReviewSecton = () => {
             </tr>
           </thead>
           <tbody>
-            {review.length >= 1 ? <>{ review.map(view => <SingleSection
+            { review.length >= 1 ? 
+              review.map(view => <SingleSection
               key={view._id}
               view={view} image={user?.photoURL}
-            ></SingleSection>)}</> :
-              <><h1 className="text-5xl font-bold text-warning">No Service Review</h1></>
+            ></SingleSection>) :
+              <h1 className="text-5xl font-bold text-warning">No Service Review</h1>
             
           }
           </tbody>
