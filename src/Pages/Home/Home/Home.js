@@ -5,6 +5,7 @@ import CourseSummary from '../CourseSummary/CourseSummary';
 import Experience from '../Experience/Experience';
 import Feature from '../Feature/Feature';
 import Service from '../Service/Service';
+import StudentsTestimonial from '../StudentsTestimonial/StudentsTestimonial';
 import TopCategories from '../TopCategories/TopCategories';
 import UpcomingEvents from '../UpcomingEvents/UpcomingEvents';
 
@@ -19,6 +20,7 @@ const Home = () => {
             <Service></Service>
             <UpcomingEvents></UpcomingEvents>
             <CourseSummary></CourseSummary>
+            <StudentsTestimonial></StudentsTestimonial>
         </div>
     );
 };
